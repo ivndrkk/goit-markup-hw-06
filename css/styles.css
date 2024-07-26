@@ -842,11 +842,49 @@ footer .container{
     margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+    .container{
+        width: 736px;
+    }
+    .menu-header-btn {
+        display: none;
+    }
+    .nav-menu{
+        display: flex;
+        gap: 40px;
+    }
+    .header-address {
+        display: block;
+        font-style: normal;
+        align-items: center;
+    }
+    .address-menu{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .first-section {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-img-tablet.jpg);
+        padding-top: 112px;
+        padding-bottom: 112px;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .main-title{
+        font-size: 56px;
+        font-weight: 700;
+        max-width: 496px;
+        line-height: 60px;
+        margin-bottom: 36px;
+    }
+
+}
+
 @media screen and (min-width:1158px){
 
     .container{
         width: 1158px;
         padding-left: 15px;
+        padding-right: 15px;
     }
     .nav-menu{
         display: flex;
