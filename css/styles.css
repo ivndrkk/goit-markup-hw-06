@@ -877,6 +877,62 @@ footer .container{
         margin-bottom: 36px;
     }
 
+        .features .container ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .features .container ul li {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .team .team-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .team-member{
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .portfolio-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+        .portfolio-list-item{
+            flex-basis: calc((100% - 24px) / 2);
+        }
+    .page-footer .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .page-footer{
+        padding: 96px 100px;
+    }
+
+
+        .footer-subscribe-form{
+            flex-direction: row;
+        }
+
+    .footer-logo-nd-paragraph{
+        margin-bottom: 72px;
+        margin-right: 0;
+    }
+
+    .modal{
+        width: 408px;
+        min-height: 584px;
+    }
+
+    .mobile-menu-overlay{
+        display: none;
+    }
+
 }
 
 @media screen and (min-width:1158px){
@@ -894,6 +950,11 @@ footer .container{
         display: block;
         font-style: normal;
         align-items: center;
+    }
+
+    .address-menu{
+        flex-direction: row;
+        gap: 40px;
     }
 
     .menu-header-btn{
@@ -918,6 +979,7 @@ footer .container{
     .features .container ul{
         gap: 24px;
         flex-direction: row;
+        flex-wrap: nowrap;
     }
     .features-icon-container{
         display: flex;
@@ -940,6 +1002,7 @@ footer .container{
     .team .team-list {
         flex-direction: row;
         gap: 24px;
+        flex-wrap: nowrap;
     }
 
     .portfolio-list{
@@ -950,8 +1013,7 @@ footer .container{
     }
 
     .portfolio-list-item{
-        
-        width: calc((100% - 48px) / 3);
+        flex-basis: calc((100% - 48px) / 3);
     }
 
     footer .container{
@@ -973,6 +1035,15 @@ footer .container{
 
     .mobile-menu-overlay{
         display: none;
+    }
+
+    .footer-logo-nd-paragraph {
+        margin-bottom: 0;
+        margin-right: 120px;
+    }
+
+    .page-footer .container{
+        flex-wrap: nowrap;
     }
 
 }
