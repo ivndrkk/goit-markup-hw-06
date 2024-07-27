@@ -64,6 +64,10 @@ header .container{
     align-items: center;
 }
 
+.team .container {
+    width: 264px;
+}
+
 .nav-menu{
     display: none;
 }
@@ -923,6 +927,10 @@ footer .container{
         flex-basis: calc((100% - 24px) / 2);
     }
 
+    .team .container{
+        width: 552px;
+    }
+
     .team .team-list{
         flex-direction: row;
         flex-wrap: wrap;
@@ -999,6 +1007,10 @@ footer .container{
         width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .team .container {
+        width: 1128px;
     }
     .nav-menu{
         display: flex;
