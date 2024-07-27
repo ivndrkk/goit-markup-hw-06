@@ -25,6 +25,7 @@ p{
 
 img{
     display: block;
+    max-width: 100%;
 }
 
 .container {
@@ -155,10 +156,17 @@ header .container{
     background-color: #ffff;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 40px;
     opacity: 0;
     pointer-events: none;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-menu-overlay .navigation-link{
+    padding: 0;
 }
 
 .mobile-header-menu-list .navigation-link {
@@ -170,7 +178,6 @@ header .container{
     flex-direction: column;
     gap: 40px;
     margin-top: 72px;
-    margin-bottom: 168px;
 }
 
 .header-address-mobile{
@@ -192,6 +199,7 @@ header .container{
 
 .mobile-menu-overlay .team-member-social-icons{
     gap: 40px;
+    margin-top: 0;
 }
 
 .first-section{
@@ -201,11 +209,17 @@ header .container{
     background-position: center;
 
 
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile-img.jpg);
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.jpg);
     padding-top: 72px;
     padding-bottom: 72px;
     max-width: 320px;
     margin: 0 auto;
+}
+
+@media (min-resolution: 192dpi) {
+    .first-section {
+        background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-mobile@2x.jpg');
+    }
 }
 
 .main-title{
@@ -490,13 +504,11 @@ footer .container{
     display: flex;
     flex-direction: column;
     gap: 72px;
+    align-items: center;
     
 }
 
-.footer-logo-nd-paragraph{
-    margin-right: 120px;
 
-}
 
 .logo-footer{
     color: #4d5ae5;
@@ -508,6 +520,7 @@ footer .container{
     text-transform: uppercase;
     margin-bottom: 16px;
     display: inline-block;
+    margin-left: 25%;
 }
 
 .logo-white{
@@ -529,7 +542,7 @@ footer .container{
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
-    align-self: center;
+    text-align: center;
 
 }
 
@@ -566,9 +579,7 @@ footer .container{
 }
 
 
-.footer-social-icons{
-    margin-right: 80px;
-}
+
 
 .footer-subscribe-form{
     display: flex;
@@ -584,6 +595,7 @@ footer .container{
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-subscribe-input{
@@ -623,8 +635,6 @@ footer .container{
     padding: 8px 24px;
     box-sizing: border-box;
     display: flex;
-
-    align-self: flex-end;
     justify-content: center;
     align-items: center;
     font-family: "Roboto", sans-serif;
@@ -853,22 +863,33 @@ footer .container{
         display: flex;
         gap: 40px;
     }
+    .page-header{
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
     .header-address {
         display: block;
         font-style: normal;
         align-items: center;
+    }
+
+    .header-address-link{
+        font-size: 12px;
     }
     .address-menu{
         flex-direction: column;
         gap: 12px;
     }
     .first-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-img-tablet.jpg);
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet.jpg);
         padding-top: 112px;
         padding-bottom: 112px;
         max-width: 768px;
         margin: 0 auto;
     }
+
+    
+    
     .main-title{
         font-size: 56px;
         font-weight: 700;
@@ -880,8 +901,13 @@ footer .container{
         .features .container ul{
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
     }
+
+        .features-section-item-title{
+            text-align: left;
+        }
 
     .features .container ul li {
         flex-basis: calc((100% - 24px) / 2);
@@ -899,7 +925,8 @@ footer .container{
     .portfolio-list{
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        row-gap: 72px;
+        column-gap: 24px;
     }
 
         .portfolio-list-item{
@@ -911,12 +938,19 @@ footer .container{
         gap: 24px;
     }
     .page-footer{
-        padding: 96px 100px;
+        padding: 96px 0;
+    }
+
+    .page-footer .container{
+        padding-left:108px;
+        align-items: baseline;
+        column-gap: 24px;
     }
 
 
         .footer-subscribe-form{
             flex-direction: row;
+            gap: 24px;
         }
 
     .footer-logo-nd-paragraph{
@@ -933,6 +967,20 @@ footer .container{
         display: none;
     }
 
+        .page-footer p {
+            text-align: left;
+        }
+    
+        .logo-footer {
+            margin-left: 0;
+        }
+
+}
+
+@media (min-resolution: 192dpi) and (min-width: 768px){
+    .first-section {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet@2x.jpg);;
+    }
 }
 
 @media screen and (min-width:1158px){
@@ -962,7 +1010,7 @@ footer .container{
     }
 
     .first-section {
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_img.jpg);
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
@@ -984,6 +1032,12 @@ footer .container{
     .features-icon-container{
         display: flex;
     }
+        .features-section-item-text{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+        }
 
     .section {
         padding-top: 120px;
@@ -1016,11 +1070,14 @@ footer .container{
         flex-basis: calc((100% - 48px) / 3);
     }
 
-    footer .container{
+    .page-footer .container{
         flex-direction: row;
         align-items: baseline;
-        gap: none;
+        gap: 0;
+        padding-left: 0;
+        flex-wrap: nowrap;
     }
+
 
 
     .footer-subscribe-form{
@@ -1042,10 +1099,36 @@ footer .container{
         margin-right: 120px;
     }
 
-    .page-footer .container{
-        flex-wrap: nowrap;
+        .footer-social-icons {
+            margin-right: 80px;
+        }   
+
+    .page-footer p{
+        text-align: left;
+    }
+
+    .logo-footer{
+        margin-left: 0;
+    }
+
+    .page-header{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .header-address-link{
+        font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
     }
 
 }
 
+@media (min-resolution: 192dpi) and (min-width: 1158px) {
+    .first-section {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop@2x.jpg);
+        ;
+    }
+}
 
